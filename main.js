@@ -93,3 +93,61 @@ switch(res){
 }
 
 // Функции
+
+function sum (a,b){
+	return a+b;
+}
+
+document.write(sum(23,34));
+
+var person = {
+	firstName: 'Brad',
+	age: 45,
+	children: ['Liza','Petya'],
+	adress: {
+		street:'555 Some st',
+		city:'Boston',
+		state:'MA'
+	},
+	NameAge: function (){
+		return this.firstName+", age is - "+this.age;
+	}
+}
+console.log("Name: "+person.firstName+"; "+"Years: "+
+	person.age+"; "+"Adress: "+person.adress.city+";");
+
+//Конструкторы
+var apple = new Object ();
+apple.color = 'Green';
+apple.shape = 'Round';
+
+apple.describe = function () {
+return 'An apple is ' + this.color;
+}
+console.log (apple.describe());
+
+apple.describe = function () {
+return 'A shape is ' + this.shape;
+}
+console.log (apple.describe());
+
+//Конструкторы с параметрами (Объекты)
+
+function Fruit (color,shape){
+	this.color = color;
+	this.shape = shape;
+}
+var melon = new Fruit ('yellow', 'round');
+var apple = new Fruit ('red', 'round');
+
+apple.describe = function (){
+	return 'An apple is ' + this.color;
+}
+console.log (apple.describe ());
+
+apple.describe = function (){
+	return 'A shape is ' + this.shape;
+}
+console.log (apple.describe ());
+
+// События
